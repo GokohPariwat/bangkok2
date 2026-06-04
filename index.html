@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบข้อมูลสถานที่เลือกตั้ง - สำนักงานเขตพญาไท</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Sarabun', sans-serif;
+            /* Background color from the provided image */
+            background-color: #f4f5fa; 
+        }
+        /* Custom purple from the image header */
+        .bg-dopa-purple {
+            background-color: #6a1b9a; /* Adjusted to match image */
+            /* Adding a subtle gradient like the image */
+            background-image: linear-gradient(135deg, #7b1fa2 0%, #4a148c 100%);
+        }
+        .text-dopa-purple {
+            color: #6a1b9a;
+        }
+        .border-dopa-purple {
+            border-color: #e1bee7;
+        }
+        /* Focus ring color */
+        .ring-dopa-purple {
+            --tw-ring-color: rgba(106, 27, 154, 0.5);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased text-gray-800">
+
+    <!-- Header Section (Optional, but adds to the official look) -->
+    <header class="bg-dopa-purple text-white py-6 shadow-md z-10 relative">
+        <!-- Optional: A subtle dot pattern overlay on header like the image -->
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(circle, white 1px, transparent 1px); background-size: 20px 20px;"></div>
+        
+        <div class="container mx-auto px-4 text-center relative z-10">
+            <!-- Emulating the logo from the image -->
+            <div class="flex justify-center mb-4">
+                <div class="bg-white rounded-full p-2 shadow-lg inline-block flex items-center justify-center w-24 h-24 md:w-28 md:h-28">
+                    <!-- Added actual logo image tag -->
+                    <img src="Logo.png" alt="โลโก้สำนักงานเขตพญาไท" class="max-w-full max-h-full object-contain drop-shadow-md" onerror="this.src='https://placehold.co/100x100/ffffff/6a1b9a?text=Logo'">
+                </div>
+            </div>
+            <h1 class="text-3xl md:text-4xl font-bold mb-2 tracking-wide">ระบบข้อมูลสถานที่เลือกตั้ง</h1>
+            <h2 class="text-xl md:text-2xl font-medium opacity-90">สำนักงานเขตพญาไท</h2>
+        </div>
+    </header>
+
+    <!-- Main Content Area: Split View -->
+    <main class="flex-grow flex flex-col md:flex-row container mx-auto px-4 py-8 gap-8">
+        
+        <!-- Left Side: Check Election Status (BORA) -->
+        <div class="flex-1 flex flex-col bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] overflow-hidden transition-transform duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
+            <div class="p-8 flex-grow flex flex-col items-center justify-center text-center">
+                <div class="bg-purple-100 p-4 rounded-full mb-6">
+                    <svg class="w-12 h-12 text-dopa-purple" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">ตรวจสอบสิทธิและสถานที่</h3>
+                <p class="text-gray-600 mb-8 max-w-sm">
+                    ตรวจสอบรายชื่อผู้มีสิทธิเลือกตั้ง และรายละเอียดสถานที่ลงคะแนนเสียงของท่านผ่านระบบของกรมการปกครอง
+                </p>
+                <a href="https://boraservices.bora.dopa.go.th/election/enqelection-local/" target="_blank" rel="noopener noreferrer" 
+                   class="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white transition-colors duration-300 rounded-xl bg-dopa-purple hover:bg-purple-800 focus:outline-none focus:ring-4 focus:ring-dopa-purple shadow-lg w-full max-w-xs">
+                    เข้าสู่ระบบตรวจสอบสิทธิ
+                    <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+            <div class="bg-gray-50 p-4 border-t border-gray-100 text-center text-sm text-gray-500">
+                ระบบโดย กรมการปกครอง (BORA Services)
+            </div>
+        </div>
+
+        <!-- Right Side: Election Map (GitHub Pages) -->
+        <div class="flex-1 flex flex-col bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.08)] overflow-hidden transition-transform duration-300 hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)]">
+            <div class="p-8 flex-grow flex flex-col items-center justify-center text-center">
+                <div class="bg-green-100 p-4 rounded-full mb-6">
+                    <svg class="w-12 h-12 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path></svg>
+                </div>
+                <h3 class="text-2xl font-bold text-gray-800 mb-4">แผนที่หน่วยเลือกตั้ง</h3>
+                <p class="text-gray-600 mb-8 max-w-sm">
+                    ดูแผนที่แสดงจุดที่ตั้งของหน่วยเลือกตั้งทั้งหมดในพื้นที่เขตพญาไท เพื่อความสะดวกในการเดินทาง
+                </p>
+                <a href="https://gokohpariwat.github.io/bangkok1/" target="_blank" rel="noopener noreferrer" 
+                   class="inline-flex items-center justify-center px-8 py-4 text-lg font-medium text-white transition-colors duration-300 rounded-xl bg-green-500 hover:bg-green-600 focus:outline-none focus:ring-4 focus:ring-green-300 shadow-lg w-full max-w-xs">
+                    ดูแผนที่หน่วยเลือกตั้ง
+                    <svg class="w-5 h-5 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </a>
+            </div>
+            <div class="bg-gray-50 p-4 border-t border-gray-100 text-center text-sm text-gray-500">
+                ระบบตรวจสอบสถานที่เลือกตั้ง
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="py-10 text-center text-sm text-gray-500 mt-auto flex flex-col items-center">
+        <!-- ย้ายปุ่มทำแบบสอบถามมาด้านบน และปรับดีไซน์ให้น่าสนใจ (Gradient, Shadow, Hover Effects) -->
+        <a href="https://forms.gle/dMC6cS98jwwPZPR46" target="_blank" rel="noopener noreferrer" 
+           class="group mb-5 relative inline-flex items-center justify-center px-6 py-3 text-base font-semibold text-white transition-all duration-300 rounded-full bg-gradient-to-r from-[#9c27b0] to-[#6a1b9a] shadow-[0_4px_15px_rgba(106,27,154,0.4)] hover:shadow-[0_8px_25px_rgba(106,27,154,0.6)] hover:-translate-y-1 focus:outline-none focus:ring-4 focus:ring-purple-300">
+            <!-- เพิ่มลูกเล่นให้ไอคอนขยับเมื่อเอาเมาส์ชี้ (group-hover:scale-110 group-hover:-rotate-12) -->
+            <svg class="w-5 h-5 mr-2 transition-transform duration-300 group-hover:scale-110 group-hover:-rotate-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
+            </svg>
+            ทำแบบสอบถาม
+        </a>
+        
+        <p class="font-medium text-gray-600">จัดทำเพื่ออำนวยความสะดวกแก่ผู้มีสิทธิ์เลือกตั้งในเขตพญาไท</p>
+    </footer>
+
+</body>
+</html>
